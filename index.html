@@ -2,45 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1920, initial-scale=1.0">
-    <meta name="description" content="PS4 Games Database - 17,065+ PS4 games with 45,910+ download links">
-    <title>PS4 Games Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete database of 17,065+ PS4 games with direct download links from Mediafire, 1File, and more. Free PKG files for jailbroken PS4 consoles.">
+    <meta name="keywords" content="PS4 games, PS4 PKG, PS4 download, free PS4 games, jailbroken PS4, Mediafire, 1File">
+    <title>PS4 Games Database - 17,065+ Games with Download Links</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: Arial, sans-serif;
-            background: #1a1a2e;
-            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
         
         .container {
-            max-width: 1880px;
+            max-width: 1400px;
             margin: 0 auto;
-            background: #16213e;
-            border-radius: 10px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
         
         header {
-            background: #0f3460;
+            background: linear-gradient(135deg, #003791 0%, #0066cc 100%);
+            color: white;
             padding: 40px;
             text-align: center;
-            border-bottom: 3px solid #e94560;
         }
         
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
         
         .stat-item {
@@ -48,44 +53,43 @@
         }
         
         .stat-number {
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
             display: block;
         }
         
         .stat-label {
             font-size: 0.9em;
-            opacity: 0.8;
+            opacity: 0.9;
             margin-top: 5px;
         }
         
         .search-container {
             padding: 30px;
-            background: #0f3460;
-            border-bottom: 2px solid #e94560;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
         }
         
         #searchInput {
             width: 100%;
-            padding: 20px;
+            padding: 18px 25px;
             font-size: 18px;
-            border: 2px solid #e94560;
-            border-radius: 5px;
+            border: 2px solid #003791;
+            border-radius: 50px;
             outline: none;
-            background: #1a1a2e;
-            color: #fff;
+            transition: all 0.3s;
         }
         
         #searchInput:focus {
-            border-color: #00d4ff;
-            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            border-color: #0066cc;
+            box-shadow: 0 0 0 4px rgba(0, 55, 145, 0.1);
         }
         
         .search-info {
             margin-top: 15px;
             text-align: center;
-            color: #aaa;
-            font-size: 16px;
+            color: #666;
+            font-size: 14px;
         }
         
         .games-container {
@@ -99,31 +103,39 @@
         }
         
         .letter-header {
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
-            color: #00d4ff;
+            color: #003791;
             padding: 15px 0;
-            border-bottom: 2px solid #e94560;
+            border-bottom: 4px solid #003791;
             margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .game-item {
             padding: 20px;
             margin: 10px 0;
-            border-radius: 5px;
-            background: #0f3460;
-            border-left: 4px solid #e94560;
+            border-radius: 10px;
+            transition: all 0.2s;
+            border-left: 5px solid transparent;
+            background: #f8f9fa;
         }
         
         .game-item:hover {
-            background: #1a4d7a;
-            border-left-color: #00d4ff;
+            background: #e3f2fd;
+            border-left-color: #003791;
+            transform: translateX(8px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         .game-title {
             font-size: 18px;
             font-weight: 600;
-            color: #00d4ff;
+            color: #003791;
             margin-bottom: 10px;
         }
         
@@ -135,15 +147,13 @@
         }
         
         .download-btn {
-            padding: 12px 20px;
+            padding: 8px 16px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
-            display: inline-block;
-            border: none;
-            cursor: pointer;
             transition: all 0.2s;
+            display: inline-block;
         }
         
         .btn-mediafire {
@@ -153,6 +163,8 @@
         
         .btn-mediafire:hover {
             background: #1565c0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.3);
         }
         
         .btn-1file {
@@ -162,6 +174,8 @@
         
         .btn-1file:hover {
             background: #2e7d32;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 160, 71, 0.3);
         }
         
         .btn-other {
@@ -171,6 +185,8 @@
         
         .btn-other:hover {
             background: #e65100;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(251, 140, 0, 0.3);
         }
         
         .btn-page {
@@ -180,25 +196,28 @@
         
         .btn-page:hover {
             background: #495057;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
         }
         
         .link-count {
             font-size: 12px;
-            color: #aaa;
+            color: #666;
             margin-top: 5px;
         }
         
         footer {
-            background: #0f3460;
+            background: #f8f9fa;
             padding: 25px;
             text-align: center;
-            color: #aaa;
-            border-top: 2px solid #e94560;
+            color: #666;
+            border-top: 2px solid #e9ecef;
         }
         
         footer a {
-            color: #00d4ff;
+            color: #003791;
             text-decoration: none;
+            font-weight: 500;
         }
         
         footer a:hover {
@@ -209,22 +228,23 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #e94560;
+            background: #003791;
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 24px;
-            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             transition: all 0.3s;
+            font-size: 24px;
         }
         
         .scroll-top:hover {
-            background: #00d4ff;
+            background: #0066cc;
+            transform: scale(1.1);
         }
         
         .scroll-top.show {
@@ -235,178 +255,180 @@
             text-align: center;
             padding: 50px;
             font-size: 18px;
-            color: #aaa;
+            color: #666;
         }
         
-        .progress-bar {
-            width: 100%;
-            height: 4px;
-            background: #0f3460;
-            margin: 10px 0;
-            border-radius: 2px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: #00d4ff;
-            width: 0%;
-            transition: width 0.3s;
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .stat-number { font-size: 1.5em; }
+            #searchInput { font-size: 16px; padding: 15px 20px; }
+            .game-title { font-size: 16px; }
+            .download-btn { padding: 6px 12px; font-size: 12px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>PS4 Games Database</h1>
+            <h1>🎮 PS4 Games Complete Database</h1>
             <div class="stats">
                 <div class="stat-item">
-                    <span class="stat-number">17,065</span>
-                    <span class="stat-label">Games</span>
+                    <span class="stat-number" id="totalGames">17,065</span>
+                    <span class="stat-label">Total Games</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">45,910</span>
-                    <span class="stat-label">Links</span>
+                    <span class="stat-number" id="totalLinks">45,910</span>
+                    <span class="stat-label">Download Links</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3 Sources</span>
+                    <span class="stat-label">Database</span>
                 </div>
             </div>
         </header>
         
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search games..." onkeyup="searchGames()">
-            <div class="search-info" id="searchInfo">Loading...</div>
-            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <input type="text" id="searchInput" placeholder="🔍 Search for games... (e.g., 'Batman', 'Final Fantasy', 'Call of Duty')" onkeyup="searchGames()">
+            <div class="search-info" id="searchInfo">Loading games database...</div>
         </div>
         
         <div class="games-container" id="gamesContainer">
-            <div class="loading">Loading games database...</div>
+            <div class="loading">Loading 17,065 games with download links...</div>
         </div>
         
         <footer>
-            <p>PS4 Games Database | 17,065+ Games | 45,910+ Download Links</p>
-            <p>Sources: https://huggingfacer04.github.io/ps4-games-database/</p>
+            <p><strong>PS4 Games Database</strong> | 17,065+ Games | 45,910+ Download Links</p>
+            <p>Sources: dlpsgame.com, romsfun.com, arabicps4games.github.io</p>
+            <p>Built with <a href="https://galaxy.ai/?via=start-building" target="_blank">Galaxy.ai</a></p>
         </footer>
     </div>
     
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">UP</button>
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
     
     <script>
-        var allGames = [];
-        var loadedCount = 0;
+        let allGames = [];
         
-        function loadGames() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'ps4_games_expanded.json', true);
-            
-            xhr.onprogress = function(e) {
-                if (e.lengthComputable) {
-                    var percentComplete = (e.loaded / e.total) * 100;
-                    document.getElementById('progressFill').style.width = percentComplete + '%';
-                }
-            };
-            
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    try {
-                        allGames = JSON.parse(xhr.responseText);
-                        displayGames(allGames);
-                        document.getElementById('searchInfo').textContent = 'Showing all ' + allGames.length + ' games';
-                    } catch (e) {
-                        document.getElementById('gamesContainer').innerHTML = '<div class="loading">Error parsing database</div>';
-                    }
-                }
-            };
-            
-            xhr.onerror = function() {
-                document.getElementById('gamesContainer').innerHTML = '<div class="loading">Error loading database</div>';
-            };
-            
-            xhr.send();
+        // Load games data
+        async function loadGames() {
+            try {
+                const response = await fetch('ps4_games_expanded.json');
+                allGames = await response.json();
+                displayGames(allGames);
+                document.getElementById('searchInfo').textContent = `Showing all ${allGames.length.toLocaleString()} games`;
+            } catch (error) {
+                document.getElementById('gamesContainer').innerHTML = '<div class="loading">Error loading games database. Please refresh the page.</div>';
+                console.error('Error loading games:', error);
+            }
         }
         
         function displayGames(games) {
-            var container = document.getElementById('gamesContainer');
+            const container = document.getElementById('gamesContainer');
             container.innerHTML = '';
             
-            var grouped = {};
-            for (var i = 0; i < games.length; i++) {
-                var game = games[i];
-                var firstChar = game.name.charAt(0).toUpperCase();
-                var letter = /[A-Z]/.test(firstChar) ? firstChar : '#';
+            // Group by first letter
+            const grouped = {};
+            games.forEach(game => {
+                const firstChar = game.name[0].toUpperCase();
+                const letter = /[A-Z]/.test(firstChar) ? firstChar : '#';
                 if (!grouped[letter]) grouped[letter] = [];
                 grouped[letter].push(game);
-            }
+            });
             
-            var letters = Object.keys(grouped).sort(function(a, b) {
+            // Sort letters
+            const letters = Object.keys(grouped).sort((a, b) => {
                 if (a === '#') return -1;
                 if (b === '#') return 1;
                 return a.localeCompare(b);
             });
             
-            for (var l = 0; l < letters.length; l++) {
-                var letter = letters[l];
-                var section = document.createElement('div');
+            // Create sections
+            letters.forEach(letter => {
+                const section = document.createElement('div');
                 section.className = 'letter-section';
+                section.setAttribute('data-letter', letter);
                 
-                var header = document.createElement('div');
+                const header = document.createElement('div');
                 header.className = 'letter-header';
                 header.textContent = letter;
                 section.appendChild(header);
                 
-                var letterGames = grouped[letter];
-                for (var g = 0; g < letterGames.length; g++) {
-                    var game = letterGames[g];
-                    var gameDiv = document.createElement('div');
+                grouped[letter].forEach(game => {
+                    const gameDiv = document.createElement('div');
                     gameDiv.className = 'game-item';
                     
-                    var title = document.createElement('div');
+                    const title = document.createElement('div');
                     title.className = 'game-title';
                     title.textContent = game.name;
                     gameDiv.appendChild(title);
                     
-                    var linksDiv = document.createElement('div');
+                    const linksDiv = document.createElement('div');
                     linksDiv.className = 'download-links';
                     
-                    var links = game.download_links.mediafire.concat(game.download_links['1file']).concat(game.download_links.other);
-                    for (var k = 0; k < links.length; k++) {
-                        var link = links[k];
-                        var btn = document.createElement('a');
-                        btn.href = 'redirect.html?url=' + encodeURIComponent(link) + '&game=' + encodeURIComponent(game.name);
+                    // Add Mediafire links
+                    game.download_links.mediafire.forEach((link, index) => {
+                        const btn = document.createElement('a');
+                        btn.href = `redirect-optimized.html?url=${encodeURIComponent(link)}&game=${encodeURIComponent(game.name)}&host=mediafire`;
                         btn.className = 'download-btn btn-mediafire';
-                        btn.textContent = 'Link ' + (k + 1);
+                        btn.textContent = `Mediafire ${index + 1}`;
                         btn.target = '_blank';
-                        btn.onclick = function(e) { e.preventDefault(); window.location.href = this.href; return false; };
                         linksDiv.appendChild(btn);
-                    }
+                    });
+                    
+                    // Add 1File links
+                    game.download_links['1file'].forEach((link, index) => {
+                        const btn = document.createElement('a');
+                        btn.href = `redirect-optimized.html?url=${encodeURIComponent(link)}&game=${encodeURIComponent(game.name)}&host=1file`;
+                        btn.className = 'download-btn btn-1file';
+                        btn.textContent = `1File ${index + 1}`;
+                        btn.target = '_blank';
+                        linksDiv.appendChild(btn);
+                    });
+                    
+                    // Add other links
+                    game.download_links.other.forEach((link, index) => {
+                        const btn = document.createElement('a');
+                        btn.href = `redirect-optimized.html?url=${encodeURIComponent(link)}&game=${encodeURIComponent(game.name)}&host=other`;
+                        btn.className = 'download-btn btn-other';
+                        btn.textContent = `Mirror ${index + 1}`;
+                        btn.target = '_blank';
+                        linksDiv.appendChild(btn);
+                    });
+                    
+                    // Add page link
+                    const pageBtn = document.createElement('a');
+                    pageBtn.href = game.page_url;
+                    pageBtn.className = 'download-btn btn-page';
+                    pageBtn.textContent = 'View Page';
+                    pageBtn.target = '_blank';
+                    linksDiv.appendChild(pageBtn);
                     
                     gameDiv.appendChild(linksDiv);
                     
-                    var linkCount = document.createElement('div');
+                    const linkCount = document.createElement('div');
                     linkCount.className = 'link-count';
-                    linkCount.textContent = game.total_links + ' links available';
+                    linkCount.textContent = `${game.total_links} download link${game.total_links !== 1 ? 's' : ''} available`;
                     gameDiv.appendChild(linkCount);
                     
                     section.appendChild(gameDiv);
-                }
+                });
                 
                 container.appendChild(section);
-            }
+            });
         }
         
         function searchGames() {
-            var input = document.getElementById('searchInput');
-            var filter = input.value.toUpperCase();
-            var sections = document.querySelectorAll('.letter-section');
-            var searchInfo = document.getElementById('searchInfo');
-            var visibleCount = 0;
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const sections = document.querySelectorAll('.letter-section');
+            const searchInfo = document.getElementById('searchInfo');
+            let visibleCount = 0;
             
-            for (var s = 0; s < sections.length; s++) {
-                var section = sections[s];
-                var games = section.querySelectorAll('.game-item');
-                var sectionHasVisible = false;
+            sections.forEach(section => {
+                const games = section.querySelectorAll('.game-item');
+                let sectionHasVisible = false;
                 
-                for (var g = 0; g < games.length; g++) {
-                    var game = games[g];
-                    var text = game.textContent || game.innerText;
+                games.forEach(game => {
+                    const text = game.textContent || game.innerText;
                     if (text.toUpperCase().indexOf(filter) > -1) {
                         game.style.display = '';
                         sectionHasVisible = true;
@@ -414,22 +436,23 @@
                     } else {
                         game.style.display = 'none';
                     }
-                }
+                });
                 
                 section.style.display = sectionHasVisible ? '' : 'none';
-            }
+            });
             
             if (filter) {
-                searchInfo.textContent = 'Found ' + visibleCount + ' games matching "' + input.value + '"';
+                searchInfo.textContent = `Found ${visibleCount.toLocaleString()} game${visibleCount !== 1 ? 's' : ''} matching "${input.value}"`;
             } else {
-                searchInfo.textContent = 'Showing all ' + allGames.length + ' games';
+                searchInfo.textContent = `Showing all ${allGames.length.toLocaleString()} games`;
             }
         }
         
-        var scrollBtn = document.getElementById('scrollTop');
-        var gamesContainer = document.getElementById('gamesContainer');
+        // Scroll to top button
+        const scrollBtn = document.getElementById('scrollTop');
+        const gamesContainer = document.getElementById('gamesContainer');
         
-        gamesContainer.addEventListener('scroll', function() {
+        gamesContainer.addEventListener('scroll', () => {
             if (gamesContainer.scrollTop > 300) {
                 scrollBtn.classList.add('show');
             } else {
@@ -438,9 +461,10 @@
         });
         
         function scrollToTop() {
-            gamesContainer.scrollTop = 0;
+            gamesContainer.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
+        // Load games on page load
         loadGames();
     </script>
 </body>
