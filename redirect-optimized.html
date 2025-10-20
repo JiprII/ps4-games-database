@@ -164,19 +164,33 @@
         
         <div class="countdown-container">
             <div class="countdown-text">Download starts in:</div>
-            <div class="countdown-timer" id="countdown">5</div>
+            <div class="countdown-timer" id="countdown">30</div>
             <div class="progress-bar-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
         </div>
-        
+
         <div class="info-section">
-            <div class="info-title">About This Download</div>
+            <div class="info-title">⚠️ Important Information</div>
             <div class="info-text">
-                You are about to download a PS4 game file. Make sure you have enough storage space on your USB drive or PS4 console.
+                <strong>To minimize advertisements:</strong> Download and use the Brave browser to download games. Visit: <a href="https://brave.com/" target="_blank" style="color: #00d4ff; text-decoration: underline;">https://brave.com/</a>
             </div>
         </div>
-        
+
+        <div class="info-section">
+            <div class="info-title">Why Are Links Behind Redirects?</div>
+            <div class="info-text">
+                The download links use redirects to prevent them from being taken offline. This is done intentionally to protect the links from being detected and removed.
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-title">Download Instructions</div>
+            <div class="info-text">
+                It may take up to 20 clicks on the same download URL before it appears correctly. This is normal - just keep trying and the download will eventually work.
+            </div>
+        </div>
+
         <div class="warning">
             This page blocks popups and redirects to protect your PS4 experience. If the download doesn't start, click "Download Now" below.
         </div>
@@ -236,12 +250,12 @@
             document.getElementById('hostName').textContent = hostNames[hostName] || 'download page';
         }
         
-        var timeLeft = 5;
+        var timeLeft = 30;
         var countdownElement = document.getElementById('countdown');
         var progressBar = document.getElementById('progressBar');
-        
+
         function updateProgress() {
-            var progress = ((5 - timeLeft) / 5) * 100;
+            var progress = ((30 - timeLeft) / 30) * 100;
             progressBar.style.width = progress + '%';
         }
         
