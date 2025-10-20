@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1920, initial-scale=1.0">
-    <meta name="description" content="PS4 Games Database - 6,001+ PS4 games with download links">
+    <meta name="description" content="PS4 Games Database - 17,065+ PS4 games with 45,910+ download links">
     <title>PS4 Games Database</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -261,11 +261,11 @@
             <h1>PS4 Games Database</h1>
             <div class="stats">
                 <div class="stat-item">
-                    <span class="stat-number">6,001</span>
+                    <span class="stat-number">17,065</span>
                     <span class="stat-label">Games</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">38,690</span>
+                    <span class="stat-number">45,910</span>
                     <span class="stat-label">Links</span>
                 </div>
             </div>
@@ -282,8 +282,8 @@
         </div>
         
         <footer>
-            <p>PS4 Games Database | 6,001+ Games | 38,690+ Download Links</p>
-            <p>Source: dlpsgame.com</p>
+            <p>PS4 Games Database | 17,065+ Games | 45,910+ Download Links</p>
+            <p>Sources: dlpsgame.com, romsfun.com, arabicps4games.github.io</p>
         </footer>
     </div>
     
@@ -295,7 +295,7 @@
         
         function loadGames() {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'ps4_games_with_downloads.json', true);
+            xhr.open('GET', 'ps4_games_expanded.json', true);
             
             xhr.onprogress = function(e) {
                 if (e.lengthComputable) {
